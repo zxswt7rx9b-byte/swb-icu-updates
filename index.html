@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MMUH ICU Team Updates</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f0f4ff;
+      min-height: 100vh;
+      padding: 0 0 60px;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a56db 0%, #0e3fa3 100%);
+      color: #fff;
+      padding: 40px 32px 36px;
+      text-align: center;
+    }
+    .header-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 36px 20px 0;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1a56db;
+      margin-bottom: 16px;
+    }
+    .issue-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1.5px solid #dbe4ff;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .issue-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .issue-badge {
+      min-width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1a56db14, #0e3fa308);
+      border: 1.5px solid #93c5fd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #1a56db;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+    .issue-info { flex: 1; }
+    .issue-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .issue-meta {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    .latest-tag {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 8px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .action-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+      cursor: pointer;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-read {
+      background: linear-gradient(135deg, #1a56db, #0e3fa3);
+      color: #fff;
+    }
+    .btn-listen {
+      background: #f0f4ff;
+      color: #1a56db;
+      border: 1.5px solid #93c5fd;
+    }
+    .btn-download {
+      background: #f8fafc;
+      color: #475569;
+      border: 1.5px solid #e2e8f0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    @media (max-width: 480px) {
+      .header { padding: 28px 20px 24px; }
+      .action-row { flex-direction: column; }
+      .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ PASSWORD OVERLAY ══ -->
+  <div id="pw-overlay" style="position:fixed;inset:0;background:#f0f4ff;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+    <div style="background:#fff;border-radius:16px;border:1.5px solid #dbe4ff;padding:40px 32px;width:90%;max-width:380px;text-align:center;box-sizing:border-box;">
+      <div style="width:56px;height:56px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#64748b;margin:0 0 6px;">Critical Care — MMUH</p>
+      <h2 style="font-size:20px;font-weight:700;color:#1e293b;margin:0 0 8px;">ICU Team Updates</h2>
+      <p style="font-size:14px;color:#64748b;margin:0 0 24px;line-height:1.5;">Staff access only. Enter the password to continue.</p>
+      <input id="pw-input" type="password" placeholder="Enter password" style="width:100%;padding:10px 14px;border:1.5px solid #dbe4ff;border-radius:10px;font-size:15px;outline:none;margin-bottom:10px;box-sizing:border-box;" />
+      <div id="pw-error" style="color:#dc2626;font-size:13px;margin-bottom:10px;display:none;">Incorrect password. Please try again.</div>
+      <button onclick="icuCheck()" style="width:100%;background:linear-gradient(135deg,#1a56db,#0e3fa3);color:#fff;border:none;border-radius:10px;padding:12px;font-size:15px;font-weight:600;cursor:pointer;">Continue</button>
+      <p style="font-size:12px;color:#94a3b8;margin:16px 0 0;">The password is on the notice board if you do not know it.</p>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(sessionStorage.getItem('icu_unlocked')==='true'){
+        document.getElementById('pw-overlay').style.display='none';
+      }
+      document.addEventListener('DOMContentLoaded',function(){
+        var inp=document.getElementById('pw-input');
+        if(inp) inp.addEventListener('keydown',function(e){if(e.key==='Enter')icuCheck();});
+      });
+    })();
+    function icuCheck(){
+      var v=document.getElementById('pw-input').value.trim().toUpperCase();
+      if(v==='MIDMETCRITCARE'){
+        sessionStorage.setItem('icu_unlocked','true');
+        document.getElementById('pw-overlay').style.display='none';
+      } else {
+        document.getElementById('pw-error').style.display='block';
+        document.getElementById('pw-input').value='';
+        document.getElementById('pw-input').focus();
+      }
+    }
+  </script>
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-tag">Critical Care — MMUH</div>
+    <h1>ICU Team Updates</h1>
+    <p>Monthly newsletters for intensive care staff at Midland Metropolitan University Hospital</p>
+  </div>
+
+  <!-- ══ ISSUES ══ -->
+  <div class="container">
+    <div class="section-label">All Issues</div>
+
+    <!-- MAY 2026 -->
+    <div class="issue-card">
+      <div class="issue-header">
+        <div class="issue-badge">May<br>2026</div>
+        <div class="issue-info">
+          <div class="issue-title">May 2026 <span class="latest-tag">Latest</span></div>
+          <div class="issue-meta">GenOMICC top 10 &middot; Extubation checklist &middot; Baton phones &middot; Uniform reminder</div>
+        </div>
+      </div>
+      <div class="action-row">
+        <a class="btn btn-read" href="may-2026.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Read newsletter
+        </a>
+        <a class="btn btn-listen" href="listen-may-2026.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Listen
+        </a>
+        <a class="btn btn-download" href="ICU_Update_May2026.m4a" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download audio
+        </a>
+      </div>
+    </div>
+
+    <!-- Future issues added above here -->
+
+    <div class="footer">
+      <p>MMUH ICU Team Updates</p>
+    </div>
+  </div>
+
+</body>
+</html>
