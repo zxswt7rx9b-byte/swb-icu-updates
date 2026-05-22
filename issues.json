@@ -1,0 +1,22 @@
+{
+  "issues": [
+    {
+      "month": "May",
+      "year": "2026",
+      "newsletter_file": "may-2026.html",
+      "listen_file": "listen-may-2026.html",
+      "audio_file": "ICU_Update_May2026.m4a",
+      "pdf_file": "ICU_Update_A4_May2026.pdf",
+      "summary": "GenOMICC top 10 &middot; Extubation checklist &middot; Baton phones &middot; Uniform reminder"
+    },
+    {
+      "month": "April",
+      "year": "2026",
+      "newsletter_file": "ICU_Team_Update_27April2026.html",
+      "listen_file": null,
+      "audio_file": "ICU_Update_27April2026.wav",
+      "pdf_file": "ICU_Update_A4_27April2026.pdf",
+      "summary": "Extubation checklist &middot; London Marathon &middot; Clinical pearls &middot; ARDS steroid protocol &middot; EEG post cardiac arrest"
+    }
+  ]
+}
