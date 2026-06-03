@@ -1,6 +1,15 @@
 {
   "issues": [
     {
+      "month": "June",
+      "year": "2026",
+      "newsletter_file": "june-2026.html",
+      "listen_file": "listen-june-2026.html",
+      "audio_file": "ICU_Update_June2026.m4a",
+      "pdf_file": "ICU_Update_A4_June2026.pdf",
+      "summary": "Research top 10 globally &middot; Extubation checklist live &middot; CVC safety case &middot; Winter Garden"
+    },
+    {
       "month": "May",
       "year": "2026",
       "newsletter_file": "may-2026.html",
